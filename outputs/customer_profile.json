@@ -1,0 +1,11 @@
+{
+  "service_call_fee": 115,
+  "hourly_rate": 90,
+  "business_hours": "Monday to Friday",
+  "priority_context": [
+    "So firstly to, I mean, get an understanding, we'll divide the conversation into during officers and after hours just to get the behavior that we'd want to have for the agent",
+    "So that is with the officers, but coming to after hours been",
+    "Do you do any kind of dispatch for afterwards"
+  ],
+  "notification_email": null
+}
