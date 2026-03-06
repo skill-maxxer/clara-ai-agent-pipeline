@@ -38,7 +38,7 @@ This simulates how an AI call agent evolves from a **generic demo configuration*
 ---
 
 # Project Structure
-
+```
 clara-agent-pipeline
 │
 ├─ dataset
@@ -73,7 +73,7 @@ clara-agent-pipeline
 ├─ pipeline_runner.py
 ├─ requirements.txt
 └─ README.md
-
+```
 Outputs are versioned so that changes between **V1 and V2 agents** are clearly visible.
 
 ---
