@@ -82,7 +82,7 @@ Always maintain a professional and helpful tone.
     return prompt.strip()
 
 def main():
-    spec_file = Path("outputs/v1_agent_spec.json")
+    spec_file = Path("outputs/accounts/bens-electric/v1/v1_agent_spec.json")
     output_file = Path("outputs/accounts/bens-electric/v1/v1_agent_prompt.txt")
     spec = load_agent_spec(spec_file)
     prompt = build_prompt(spec)

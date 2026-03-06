@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 def load_customer_profile():
-    path = Path("outputs/customer_profile.json")
+    path = Path("outputs/accounts/bens-electric/v2/customer_profile.json")
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 

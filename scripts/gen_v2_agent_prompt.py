@@ -6,7 +6,7 @@ def load_v1_prompt():
     return path.read_text(encoding="utf-8")
 
 def load_customer_profile():
-    path = Path("outputs/customer_profile.json")
+    path = Path("outputs/accounts/bens-electric/v2/customer_profile.json")
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 

@@ -92,7 +92,7 @@ def analyze_onboarding_transcript(file_path):
     return profile
 
 def main():
-    input_file = "outputs/onboarding_transcript.txt"
+    input_file = "outputs/accounts/bens-electric/onboarding_transcript.txt"
     output_file = "outputs/accounts/bens-electric/v2/customer_profile.json"
     profile = analyze_onboarding_transcript(input_file)
 

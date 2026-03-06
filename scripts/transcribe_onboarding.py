@@ -21,7 +21,7 @@ if __name__ == "__main__":
         audio_file = Path(sys.argv[1])
     else:
         audio_file = Path("dataset/onboarding_calls/audio1975518882.m4a")
-    output_file = Path("outputs/onboarding_transcript.txt")
+    output_file = Path("outputs/accounts/bens-electric/onboarding_transcript.txt")
 
     if not audio_file.exists():
         print("Audio file not found:", audio_file)
