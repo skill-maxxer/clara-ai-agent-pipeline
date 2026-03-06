@@ -13,6 +13,19 @@ This pipeline operates entirely offline using open-source tools, resulting in a 
 
 ---
 
+# Video Walkthrough
+
+This short video demonstrates:
+
+- Running the pipeline workflow
+- Processing one demo and one onboarding call pair
+- Generated outputs
+- How the agent evolves from **V1 → V2**
+
+Watch the walkthrough here: [Clara Agent Pipeline Demo](https://www.loom.com/share/2670b3fd7291449999b413a228069480)
+
+---
+
 # Pipeline Overview
 
 ## Pipeline Flow
