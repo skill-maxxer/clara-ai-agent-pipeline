@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 .env
 .DS_Store
-dataset/onboarding_calls/
+dataset/onboarding_calls/*
+!dataset/onboarding_calls/.gitkeep
