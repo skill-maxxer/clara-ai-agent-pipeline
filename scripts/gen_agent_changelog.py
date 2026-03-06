@@ -37,7 +37,7 @@ def main():
     profile = load_customer_profile()
     changelog = build_changelog(profile)
 
-    output_path = Path("outputs/agent_changelog.txt")
+    output_path = Path("outputs/accounts/bens-electric/v2/agent_changelog.txt")
     output_path.write_text(changelog, encoding="utf-8")
 
     print("Agent changelog saved to:", output_path)

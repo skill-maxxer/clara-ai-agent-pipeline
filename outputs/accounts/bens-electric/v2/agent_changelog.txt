@@ -1,0 +1,7 @@
+# Agent Changelog
+
+Updates after onboarding call:
+> Added service call fee policy: $115.
+> Added hourly billing information: approximately $90 per hour.
+> Added business operating hours: Monday to Friday.
+> Added handling instructions for after-hours or priority customers.

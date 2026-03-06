@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 def load_v1_prompt():
-    path = Path("outputs/v1_agent_prompt.txt")
+    path = Path("outputs/accounts/bens-electric/v1/v1_agent_prompt.txt")
     return path.read_text(encoding="utf-8")
 
 def load_customer_profile():
@@ -49,7 +49,7 @@ def main():
 
     v2_prompt = build_v2_prompt(v1_prompt, profile)
 
-    output_path = Path("outputs/v2_agent_prompt.txt")
+    output_path = Path("outputs/accounts/bens-electric/v2/v2_agent_prompt.txt")
     output_path.write_text(v2_prompt, encoding="utf-8")
 
     print("Updated agent prompt saved to:", output_path)

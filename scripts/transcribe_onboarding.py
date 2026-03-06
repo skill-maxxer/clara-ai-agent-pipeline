@@ -2,6 +2,7 @@ import os
 os.environ["PATH"] += os.pathsep + r"C:\ffmpeg\ffmpeg-8.0.1-essentials_build\bin"
 import whisper
 from pathlib import Path
+import sys
 
 def transcribe_audio(audio_path, output_path):
     print("Loading Whisper model")
@@ -16,7 +17,10 @@ def transcribe_audio(audio_path, output_path):
 
 if __name__ == "__main__":
 
-    audio_file = Path("dataset/onboarding_calls/audio1975518882.m4a")
+    if len(sys.argv) > 1:
+        audio_file = Path(sys.argv[1])
+    else:
+        audio_file = Path("dataset/onboarding_calls/audio1975518882.m4a")
     output_file = Path("outputs/onboarding_transcript.txt")
 
     if not audio_file.exists():

@@ -59,22 +59,41 @@ def extract_pricing(text):
 def analyze_onboarding_transcript(file_path):
     text = Path(file_path).read_text(encoding="utf-8")
     profile = {
+        "account_id": "bens-electric",
         "service_call_fee": None,
         "hourly_rate": None,
         "business_hours": detect_business_hours(text),
         "priority_context": detect_priority_context(text),
-        "notification_email": extract_email(text)
+        "notification_email": extract_email(text),
+        "questions_or_unknowns": []
     }
     pricing = extract_pricing(text)
 
     profile["service_call_fee"] = pricing["service_call_fee"]
     profile["hourly_rate"] = pricing["hourly_rate"]
 
+    if profile["service_call_fee"] is None:
+        profile["questions_or_unknowns"].append(
+            "Service call fee not mentioned in onboarding call"
+        )
+    if profile["hourly_rate"] is None:
+        profile["questions_or_unknowns"].append(
+            "Hourly rate not clearly mentioned"
+        )
+    if profile["business_hours"] is None:
+        profile["questions_or_unknowns"].append(
+            "Business hours not confirmed"
+        )
+    if profile["notification_email"] is None:
+        profile["questions_or_unknowns"].append(
+            "Notification email not provided"
+        )
+
     return profile
 
 def main():
     input_file = "outputs/onboarding_transcript.txt"
-    output_file = "outputs/customer_profile.json"
+    output_file = "outputs/accounts/bens-electric/v2/customer_profile.json"
     profile = analyze_onboarding_transcript(input_file)
 
     with open(output_file, "w", encoding="utf-8") as f:

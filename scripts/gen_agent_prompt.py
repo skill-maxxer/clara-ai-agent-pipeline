@@ -56,6 +56,26 @@ When answering calls:
 - schedule a service appointment if appropriate
 - filter out spam or sales calls
 
+Business hours call flow:
+- greet the caller
+- ask the purpose of the call
+- collect caller name and phone number
+- understand the service request
+- schedule an appointment or route appropriately
+- if the caller asks for a human, attempt to transfer the call
+- if transfer fails, collect details and promise follow-up
+- ask if they need anything else before ending the call
+
+After-hours call flow:
+- greet the caller and inform them the office may be closed
+- ask the purpose of the call
+- determine whether the issue is an emergency
+- if emergency, collect name, phone number, and address immediately
+- attempt call transfer if emergency support is available
+- if transfer fails, apologize and confirm someone will follow up
+- if not an emergency, collect details and confirm follow-up during business hours
+- ask if the caller needs anything else before closing
+
 Always maintain a professional and helpful tone.
 """
 
@@ -63,7 +83,7 @@ Always maintain a professional and helpful tone.
 
 def main():
     spec_file = Path("outputs/v1_agent_spec.json")
-    output_file = Path("outputs/v1_agent_prompt.txt")
+    output_file = Path("outputs/accounts/bens-electric/v1/v1_agent_prompt.txt")
     spec = load_agent_spec(spec_file)
     prompt = build_prompt(spec)
     with open(output_file, "w", encoding="utf-8") as f:
